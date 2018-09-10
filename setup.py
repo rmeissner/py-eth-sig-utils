@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="py_eth_sig_utils",
-    version="0.1.0",
+    version="0.2.0",
     author="Richard Meissner",
     author_email="msc.meissner@gmail.com",
     description="Python Ethereum Signing Utils",
