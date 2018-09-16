@@ -63,4 +63,4 @@ def encode_typed_data(data):
 
     domainHash = create_struct_hash("EIP712Domain", domain, types)
     messageHash = create_struct_hash(primaryType, message, types)
-    return utils.encode_hex(utils.sha3(bytes.fromhex('19') + bytes.fromhex('01') + domainHash + messageHash))
+    return utils.sha3(bytes.fromhex('19') + bytes.fromhex('01') + domainHash + messageHash)
