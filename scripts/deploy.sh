@@ -6,4 +6,4 @@ python -m pip install --upgrade setuptools wheel
 python -m pip install --upgrade twine
 
 python setup.py sdist bdist_wheel
-twine upload -u $PYPI_USER -p $PYPI_PASS dist/*
+twine upload -u $1 -p "${2}" dist/*
