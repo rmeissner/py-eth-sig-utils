@@ -1,0 +1,15 @@
+language: python
+cache: pip
+python:
+  - "3.6"
+dist: trusty
+install:
+  - pip install -r requirements.txt
+script:
+  - python -m unittest
+deploy:
+  provider: script
+  script: bash scripts/deploy.sh
+  skip_cleanup: true
+  on:
+    tags: true
