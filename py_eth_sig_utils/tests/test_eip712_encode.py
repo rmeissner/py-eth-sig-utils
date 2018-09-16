@@ -219,6 +219,5 @@ class TestEIP712(unittest.TestCase):
         #print(encode_typed_data(data))
         self.assertEqual('b4aaf457227fec401db772ec22d2095d1235ee5d0833f56f59108c9ffc90fb4b', encode_typed_data(data).hex())
 
-print(__name__)
 if __name__ == '__main__':
     unittest.main()
