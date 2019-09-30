@@ -1,4 +1,4 @@
-from ethereum import utils
+from . import utils
 from eth_utils import big_endian_to_int
 from .eip712 import encode_typed_data
 

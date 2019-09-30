@@ -1,14 +1,14 @@
 import unittest
-from ethereum import utils
+from .. import utils
 from ..eip712.encoding import *
 
 class TestEIP712(unittest.TestCase):
 
     def test_encode_type_data(self):
         #print("Test Simple")
-        data = { 
-            "types": { 
-                "EIP712Domain": [ 
+        data = {
+            "types": {
+                "EIP712Domain": [
                     { "name": 'name', "type": 'string' },
                     { "name": 'version', "type": 'string' },
                     { "name": 'chainId', "type": 'uint256' },
@@ -41,7 +41,7 @@ class TestEIP712(unittest.TestCase):
                     "wallet": '0xbBbBBBBbbBBBbbbBbbBbbbbBBbBbbbbBbBbbBBbB',
                 },
                 "contents": 'Hello, Bob!',
-            }, 
+            },
         }
         #print(create_schema("Mail", data["types"]))
         self.assertEqual('Mail(Person from,Person to,string contents)Person(string name,address wallet)', create_schema("Mail", data["types"]))
@@ -58,9 +58,9 @@ class TestEIP712(unittest.TestCase):
 
     def test_encode_type_data_array(self):
         #print("Test Arrays")
-        data = { 
-            "types": { 
-                "EIP712Domain": [ 
+        data = {
+            "types": {
+                "EIP712Domain": [
                     { "name": 'name', "type": 'string' },
                     { "name": 'version', "type": 'string' },
                     { "name": 'chainId', "type": 'uint256' },
@@ -93,7 +93,7 @@ class TestEIP712(unittest.TestCase):
                     "wallet": '0xbBbBBBBbbBBBbbbBbbBbbbbBBbBbbbbBbBbbBBbB',
                 }],
                 "contents": 'Hello, Bob!',
-            }, 
+            },
         }
 
         #print(create_schema("Mail", data["types"]))
@@ -111,9 +111,9 @@ class TestEIP712(unittest.TestCase):
 
     def test_encode_type_data_array_bytes(self):
         #print("Test Arrays and Bytes")
-        data = { 
-            "types": { 
-                "EIP712Domain": [ 
+        data = {
+            "types": {
+                "EIP712Domain": [
                     { "name": 'name', "type": 'string' },
                     { "name": 'version', "type": 'string' },
                     { "name": 'chainId', "type": 'uint256' },
@@ -148,7 +148,7 @@ class TestEIP712(unittest.TestCase):
                 }],
                 "contents": 'Hello, Bob!',
                 "payload": '0x25192142931f380985072cdd991e37f65cf8253ba7a0e675b54163a1d133b8ca'
-            }, 
+            },
         }
 
         #print(create_schema("Mail", data["types"]))
@@ -166,9 +166,9 @@ class TestEIP712(unittest.TestCase):
 
     def test_sign_type_data_bytes(self):
         #print("Test Bytes")
-        data = { 
-            "types": { 
-                "EIP712Domain": [ 
+        data = {
+            "types": {
+                "EIP712Domain": [
                     { "name": 'name', "type": 'string' },
                     { "name": 'version', "type": 'string' },
                     { "name": 'chainId', "type": 'uint256' },
@@ -203,7 +203,7 @@ class TestEIP712(unittest.TestCase):
                 },
                 "contents": 'Hello, Bob!',
                 "payload": '0x25192142931f380985072cdd991e37f65cf8253ba7a0e675b54163a1d133b8ca'
-            }, 
+            },
         }
 
         #print(create_schema("Mail", data["types"]))

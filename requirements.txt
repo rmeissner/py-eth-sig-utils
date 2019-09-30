@@ -1,2 +1,1 @@
-ethereum==2.3.2
-eth-abi==1.1.1
+eth-abi>=1.1.1

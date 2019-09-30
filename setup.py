@@ -5,7 +5,8 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="py_eth_sig_utils",
-    version="0.3.0",
+    version="0.4.0",
+    license='MIT License',
     author="Richard Meissner",
     author_email="msc.meissner@gmail.com",
     description="Python Ethereum Signing Utils",
@@ -13,6 +14,10 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/rmeissner/py-eth-sig-utils",
     packages=setuptools.find_packages(),
+    platforms='Any',
+    install_requires=[
+        'eth-abi>=1.1.1',       # MIT license
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
