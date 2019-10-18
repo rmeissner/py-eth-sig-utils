@@ -1,4 +1,4 @@
-from ethereum import utils
+from .. import utils
 from eth_abi import encode_single, encode_abi
 
 def create_struct_definition(name, schema):

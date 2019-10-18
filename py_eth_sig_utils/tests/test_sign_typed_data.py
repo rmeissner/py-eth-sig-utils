@@ -1,12 +1,12 @@
 import unittest
-from ethereum import utils
+from .. import utils
 from ..signing import *
 
 class TestSignTypedData(unittest.TestCase):
 
-    data = { 
-        "types": { 
-            "EIP712Domain": [ 
+    data = {
+        "types": {
+            "EIP712Domain": [
                 { "name": 'name', "type": 'string' },
                 { "name": 'version', "type": 'string' },
                 { "name": 'chainId', "type": 'uint256' },
@@ -39,7 +39,7 @@ class TestSignTypedData(unittest.TestCase):
                 "wallet": '0xbBbBBBBbbBBBbbbBbbBbbbbBBbBbbbbBbBbbBBbB',
             },
             "contents": 'Hello, Bob!',
-        }, 
+        },
     }
 
     def test_sign(self):
