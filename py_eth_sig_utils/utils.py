@@ -545,9 +545,3 @@ class bcolors:
     ENDC = '\033[0m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
-
-
-def DEBUG(msg, *args, **kwargs):
-    from ethereum import slogging
-
-    slogging.DEBUG(msg, *args, **kwargs)
